@@ -1,0 +1,136 @@
+$primary-color: #D2691E;
+$text-bold: bold;
+$text-secondary: #2c2c2c;
+
+.header-component {
+  padding: 10px 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .item {
+    position: relative;
+    display: flex;
+    gap: 45px;
+
+    .booking-now {
+      border-radius: 0;
+      height: 40px;
+      font-weight: $text-bold;
+      min-width: 150px;
+      font-size: 15px;
+    }
+
+    ul {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      //background: red;
+
+      li {
+        a {
+          display: flex;
+          width: fit-content;
+          height: 40px;
+          justify-content: center;
+          align-items: center;
+          //background: red;
+          min-width: 100px;
+          font-weight: $text-bold;
+          color: #000;
+
+          &.active {
+            border-bottom: 2px solid $primary-color;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+
+    .box-input {
+      position: relative;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      border-bottom: 2px solid $primary-color;
+
+      label {
+        position: absolute;
+        top: 10px;
+        left: 5px;
+        width: 100%;
+        z-index: 10;
+        transition: .3s;
+        display: block;
+        height: 100%;
+        color: #6e6e6e;
+      }
+
+      input {
+        position: relative;
+        border: none;
+        background: #F5F5F5;
+        height: 100%;
+        width: 100%;
+        padding: 0 5px;
+        //background: red;
+
+        &:focus, &:active, &:valid {
+          outline: none;
+
+          & ~ label {
+            top: -10px;
+            left: 0;
+            font-size: 12px;
+            font-weight: $text-bold;
+            color: $text-secondary;
+          }
+        }
+
+      }
+    }
+
+    .box-account {
+      display: flex;
+      width: 200px;
+      height: 40px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      span {
+        display: flex;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        text-align: center;
+        border: 1px solid #000;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .box-cart {
+      position: relative;
+      height: 40px;
+      display: flex;
+      align-items: center;
+
+      .label {
+        position: absolute;
+        top: 7px;
+        right: -5px;
+        background: #a14949;
+        color: #fff;
+        font-size: 10px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+    }
+  }
+}
