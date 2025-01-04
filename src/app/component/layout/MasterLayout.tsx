@@ -7,7 +7,7 @@ const {Content} = Layout;
 
 export const MasterLayout = () => {
   return (
-    <Layout>
+    <Layout style={{background: '#fff'}}>
       <HeaderComponent/>
 
       <Content>

@@ -8,10 +8,10 @@ export interface PostProps {
 
 export const PostComponent = (props: PostProps) => {
   return (
-    <div>
-      <div>{props.name}</div>
-      <div>{props.title}</div>
+    <div className={'post-component'}>
       <img src={props.image} alt="" className={'thumbnail'}/>
+      <div className={'text-bold text-uppercase text-center'}>{props.name}</div>
+      <div className={'text-center'}>{props.title}</div>
     </div>
   )
 }

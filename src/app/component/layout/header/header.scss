@@ -78,7 +78,7 @@
       input {
         position: relative;
         border: none;
-        background: #F5F5F5;
+        background: #fff;
         height: 100%;
         width: 100%;
         padding: 0 5px;
@@ -140,5 +140,17 @@
         display: flex;
       }
     }
+  }
+}
+
+.menu-item {
+  min-width: 150px;
+  margin: 10px 0;
+  padding: 0 10px;
+  display: block;
+
+  &.text-danger {
+    font-weight: v.$text-bold;
+    color: #e37979 !important;
   }
 }

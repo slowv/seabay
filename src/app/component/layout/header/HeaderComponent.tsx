@@ -10,7 +10,7 @@ export const HeaderComponent = () => {
     {
       key: '1',
       label: (
-        <a target="_blank" rel="noopener noreferrer" href="#">
+        <a rel="noopener noreferrer" href="#">
           Đặt tiệc
         </a>
       ),
@@ -18,12 +18,55 @@ export const HeaderComponent = () => {
     {
       key: '2',
       label: (
-        <a target="_blank" rel="noopener noreferrer" href="#">
+        <a rel="noopener noreferrer" href="#">
           Khách đoàn
         </a>
       ),
     }
   ];
+
+  const itemsAccount: MenuProps['items'] = [
+    {
+      key: '1',
+      label: (
+        <a rel="noopener noreferrer" href="#" className={'menu-item'}>
+          Thông tin cá nhân
+        </a>
+      )
+    },
+    {
+      key: '2',
+      label: (
+        <a rel="noopener noreferrer" href="#" className={'menu-item'}>
+          Cài đặt địa chỉ
+        </a>
+      )
+    },
+    {
+      key: '3',
+      label: (
+        <a rel="noopener noreferrer" href="#" className={'menu-item'}>
+          Quản lý đơn hàng
+        </a>
+      )
+    },
+    {
+      key: '4',
+      label: (
+        <a rel="noopener noreferrer" href="#" className={'menu-item'}>
+          Mã đã lưu
+        </a>
+      )
+    },
+    {
+      key: '5',
+      label: (
+        <a rel="noopener noreferrer" href="#" className={'menu-item text-danger'}>
+          Đăng xuất
+        </a>
+      )
+    }
+  ]
 
   return (
     <div className={'header-component'}>
@@ -60,18 +103,28 @@ export const HeaderComponent = () => {
         </ul>
       </div>
       <div className={'item'}>
+
         <div className={'box-input'}>
-          <input type="text" id={'search'} required />
+          <input type="text" id={'search'} required/>
           <label htmlFor="search">Tìm kiếm món ăn</label>
-          <SearchOutlined />
+          <SearchOutlined/>
         </div>
+
         <div className='box-account'>
-        <span><UserOutlined /></span> Tài khoản
+          <Dropdown menu={{items: itemsAccount}}>
+            <a onClick={(e) => e.preventDefault()}>
+              <Space>
+                <span><UserOutlined/></span> Tài khoản
+              </Space>
+            </a>
+          </Dropdown>
         </div>
+
         <div className='box-cart'>
           <div className={'label'}>3</div>
           <img src={cart} alt=""/>
         </div>
+
       </div>
     </div>
   )
