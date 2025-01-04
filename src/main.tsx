@@ -2,7 +2,7 @@ import {StrictMode} from 'react'
 import {createRoot} from 'react-dom/client'
 import {router} from "./app/core/RouteConfig.tsx";
 import {RouterProvider} from 'react-router-dom';
-import './main.css'
+import './main.scss'
 import {ConfigProvider} from "antd";
 
 createRoot(document.getElementById('root')!).render(
